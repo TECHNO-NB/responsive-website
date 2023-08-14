@@ -21,9 +21,7 @@ nav{
     color:#fff;
     position: sticky;
     top:0;
-   
-
-   
+  
 }
 .logo{
     font-size: 2.1rem;
@@ -92,81 +90,83 @@ ul li a:hover{
 }
 
 @media (max-width:1000px) {
- 
- nav{
-    z-index: 10000;
-    
- 
- }
+    nav{
+        z-index: 100;
+    }
     ul{
-    position: fixed;
-    top:-10%;
-   background-color: var(--bg-color);
-   height: 10vh;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.2)1s;
-  
+        position: fixed;
+        top:-10%;
+        background-color: var(--bg-color);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 9vh;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275)1s;
+    }
+    ul.active{
+  top:10%;
+    }
+    .home{
+       flex-direction: column;
+       height: max-content;
+       padding: none;
+       justify-content: center;
 
-  }
-  ul.active{
-  top: 10%;
-  }
+    }
+    .home-left,.home-right{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    }
+    .home-left{
+        margin-top: 1.4rem;
 
-  .home{
-    flex-direction: column;
-    height: max-content;
-    padding: none;
-    justify-content: center;
-  }
-    .home-left, .home-right{
-    width: 100%;
-    display:flex;
-   flex-direction: column;
-  justify-content: center;
-   align-items: center;
-   
-  }
-  .home-left{
-    margin-top: 1.4rem;
-  }
-  .home-left button{
-    align-items: flex-start;
-  }
-  .home-right img{
-    width: 70vh;
-  }
-  #icon{
-    display: block;
-    font-size: 2.5rem;
-  }
-
-}
-
-@media (max-width:528px) {
-    .home-left h1{
-       font-size: 3rem;
-      }
-      .home-left .txt{
-        font-size: 2.7rem;
+    }
+    .home-left button{
+        align-items: flex-start;
     }
     .home-right img{
-        width: 60vh;
-      }
+        width: 70vh;
+    }
+    #icon{
+        display: block;
+        font-size: 2.5rem;
+    }
+    @media (max-width:528px) {
+        .home-left h1{
+            font-size: 3rem;
+        }
+        .home-left .txt{
+            font-size: 2.7rem;
+        }
+        .home-right img{
+            width: 60vh;
+        }
+    }
+
+
+
+
 }
 
 @media (max-width:468px) {
+    .home-left{
+        text-align: center;
+        width: 100vw;
+       padding: 0rem 3rem;
+    }
     .home-left h1{
-       font-size: 2.3rem;
-      }
-      .home-left .txt{
+        font-size: 2rem;
+    }
+    .home-left .txt{
         font-size: 2.1rem;
     }
     .home-left p{
-        font-size: 1re0.7rem rem;
+        font-size: 1rem;
     }
     .home-right img{
         width: 50vh;
-      }
+    }
 }
